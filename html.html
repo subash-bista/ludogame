@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="h1">JS LUDO</h1>
+        <div class="dice">
+            <h4 id="p1name">Player 1</h4>
+            <img id="player1img" src="image/dice1.svg" alt="">
+        </div>
+        <div class="dice">
+            <h4 id="p2name">Player 2</h4>
+            <img id="player2img" src="image/dice6.svg" alt="">
+
+        </div>
+        <div id="btn_div">
+            <button id="btn" onclick="roll()">roll dice</button>
+        </div>
+
+
+    </div>
+    <script>
+        let p1name = document.getElementById("p1name");
+        let p2name = document.getElementById("p2name");
+        let prmt1 = prompt("what is your name")
+        let prmt2 = prompt("what is your firend name")
+        p1name.innerHTML = prmt1;
+        p2name.innerHTML = prmt2;
+        const roll = () => {
+            let h1 = document.getElementById("h1");
+
+            const p1 = Math.floor(Math.random() * 6) + 1;
+            p1dice = `image/dice${p1}.svg`;
+            let p1img = document.getElementById("player1img").setAttribute("src", p1dice)
+            const p2 = Math.floor(Math.random() * 6) + 1;
+            p2dice = `image/dice${p2}.svg`;
+            let p2img = document.getElementById("player2img").setAttribute("src", p2dice)
+            if (p1 > p2) {
+                h1.innerHTML = prmt1+" win :"
+            }
+            else if (p1 < p2) {
+                h1.innerHTML =prmt2+ " win :"
+            }
+            else if (p1 == p2) {
+                h1.innerHTML = "Draw!"
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
