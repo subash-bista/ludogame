@@ -14,11 +14,11 @@
         <h1 id="h1">JS LUDO</h1>
         <div class="dice">
             <h4 id="p1name">Player 1</h4>
-            <img id="player1img" src="image/dice1.svg" alt="">
+            <img id="player1img" src="dice1.svg" alt="">
         </div>
         <div class="dice">
             <h4 id="p2name">Player 2</h4>
-            <img id="player2img" src="image/dice6.svg" alt="">
+            <img id="player2img" src="dice6.svg" alt="">
 
         </div>
         <div id="btn_div">
@@ -38,7 +38,7 @@
             let h1 = document.getElementById("h1");
 
             const p1 = Math.floor(Math.random() * 6) + 1;
-            p1dice = `image/dice${p1}.svg`;
+            p1dice = `dice${p1}.svg`;
             let p1img = document.getElementById("player1img").setAttribute("src", p1dice)
             const p2 = Math.floor(Math.random() * 6) + 1;
             p2dice = `image/dice${p2}.svg`;
