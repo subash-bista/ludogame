@@ -1,7 +1,8 @@
 
 *{
     font-family: 'Acme', sans-serif;
-   
+  body{
+background-color:'cyan'; 
 
 }
 .container{
